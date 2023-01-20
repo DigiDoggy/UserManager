@@ -3,6 +3,24 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Chat request:
+ * Please provide an example of a program written in Java where the main idea is to work
+ * with data of users of any website who have previously registered. Such data as the user's
+ * name, birthdate, city, and email will be stored in an Array List (Provide 5 examples of users).
+ * The program's menu should be displayed in the terminal where:
+ * 1) Show all users - a list of all names will be displayed (when displaying names, make a beautiful
+ * separation of names), where before the name is placed " - sequential number (starting from 1)
+ * - ". After the entire list, the menu is displayed, you can specify the name or the sequential
+ * number in order to show all the user's data + existing notes or exit to the main menu.
+ * 2) Create a user. When creating a user, check in the email field if it is an email or not.
+ * The name should not start with numbers or spaces.
+ * 3) Update user, you can update all data as well as leave a note or edit it.
+ * 4) Delete user, data and all notes will be deleted.
+ * 5) Exit.
+ *
+ */
+
 public class UserManager {
     static ArrayList<User> users = new ArrayList<>();
 
@@ -133,7 +151,7 @@ public class UserManager {
             System.out.println("Enter the new birthdate of the user or press enter to keep the current birthdate: ");
             String birthdate = input.nextLine();
             if (!birthdate.isEmpty()) {
-                user.birthdate =birthdate;
+                user.birthdate = birthdate;
             }
             System.out.println("Enter new notes for the user or press enter to keep the current notes: ");
             String notes = input.nextLine();
